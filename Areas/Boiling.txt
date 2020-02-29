@@ -1,6 +1,10 @@
 loadout 1
 equipR Dashing
 
+?foe ! boss
+	?foe.distance > 8
+		equipR Dashing
+
 ?foe = Mine Walker
 	?foe.distance < 8
 		equipR Hammer
