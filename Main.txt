@@ -2,6 +2,9 @@ import UI/LoopCounter
 import UI/EnemyHealth
 import UI/PlayerHealth
 
+?hp < 10
+	activate P
+
 ?loc = canyon
   import Areas/Canyon
 :?loc = mushroom
