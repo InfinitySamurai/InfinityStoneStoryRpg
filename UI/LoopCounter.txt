@@ -1,0 +1,8 @@
+var loopCount = 0
+
+?loc.loop
+	loopCount++
+	
+>`1,7,#blue,--------------------\n
+>`1,8,#rain100,|   Loop Count: @loopCount@  |\n
+>`1,9,#blue,--------------------

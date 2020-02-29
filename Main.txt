@@ -1,0 +1,12 @@
+import UI/LoopCounter
+import UI/EnemyHealth
+import UI/PlayerHealth
+
+?loc = canyon
+  import Areas/Canyon
+:?loc = mushroom
+  import Areas/Mushroom
+:?loc = haunted
+  import Areas/Haunted
+:? loc = boiling
+	import Areas/Boiling

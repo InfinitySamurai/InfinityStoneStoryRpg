@@ -1,0 +1,19 @@
+// A script for auto attacking with the bardiche when it is off cooldown and swapping back
+
+var attackAnimationTimer = 0
+var attackCooldownTimer = 0
+
+var attackAnimationDuration = 20
+var attackCooldown = 900
+var range = 10
+
+?foe.distance <= range
+	?cooldown <= 0
+		equip bardiche
+		ativateR
+		attackAnimationTimer = attackAnimationDuration
+		attackCooldownTimer = attackCooldown
+	:
+		attackAnimationTimer--
+		attackCooldownTimer--
+

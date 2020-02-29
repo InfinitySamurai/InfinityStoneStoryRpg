@@ -1,0 +1,13 @@
+loadout 1
+equipR Dashing
+
+?foe = Mine Walker
+	?foe.distance < 8
+		equipR Hammer
+	
+?foe = Whip Controller
+	?foe.distance < 8
+		loadout 1
+	
+?foe = boss
+	loadout 4

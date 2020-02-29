@@ -1,0 +1,12 @@
+
+
+var isBardiching
+
+var bardiche = import Automation/Bardiche
+
+
+bardiche.RunBardiche()
+isBardiching =  bardiche.isAttacking()
+
+?!isBardiching
+  loadout 2

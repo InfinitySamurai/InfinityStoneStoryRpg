@@ -1,0 +1,20 @@
+
+
+var isBardiching
+
+var bardiche = import Automation/Bardiche
+isBardiching =  bardiche.isAttacking()
+
+?loc.loop
+	bardiche.reset()
+
+?!isBardiching
+  loadout 3
+
+?foe = boss
+	bardiche.RunBardiche()
+	isBardiching =  bardiche.isAttacking()
+
+	?!isBardiching
+	  loadout 1
+	  equipR Vigor Sword

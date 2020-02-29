@@ -1,0 +1,11 @@
+>f-2,0,#ff0000,
+^♥ @foe.hp@/@foe.maxhp@
+
+?foe.armor > 0
+	>f0,-1,#ff0000,
+	^@foe.armor@
+	
+	>f-4,-2,#ff0000,
+	^#_#\n
+	^)#)\n
+	^#¯\n 

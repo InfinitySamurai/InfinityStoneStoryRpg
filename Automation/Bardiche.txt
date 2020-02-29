@@ -1,0 +1,40 @@
+// A script for auto attacking with the bardiche when it is off cooldown and swapping back
+
+var attackAnimationTimer = 0
+var attackCooldownTimer = 0
+
+var attackAnimationDuration = 25
+var attackCooldown = 900
+var range = 10
+
+func RunBardiche()
+	// Reset everything after a loop
+	?loc.loop
+		attackAnimationTimer = 0
+		attackCooldownTimer = 0
+
+	?foe.distance <= range & foe ! insect
+		?attackCooldownTimer <= 0
+			equip bardiche
+			activateR
+			attackAnimationTimer = attackAnimationDuration
+			attackCooldownTimer = attackCooldown
+
+	attackAnimationTimer--
+	attackCooldownTimer--
+
+		
+//	>`10,20,#ffffff,Current Cooldown: @attackCooldownTimer@
+//	>`10,21,#ffffff,Current Animation: @attackAnimationTimer@
+
+
+func isAttacking()
+	?attackAnimationTimer > 0
+		return true
+	:
+		return false
+		
+func reset()
+	>`10,22,#ffffff,runningReset
+	attackAnimationTimer = 0
+	attackCooldownTimer = 0
