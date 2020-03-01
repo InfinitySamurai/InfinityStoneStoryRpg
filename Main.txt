@@ -7,6 +7,8 @@ import UI/PlayerHealth
 
 ?loc = canyon
   import Areas/Canyon
+:?loc = cave
+  import Areas/Cave
 :?loc = mushroom
   import Areas/Mushroom
 :?loc = haunted
